@@ -2,6 +2,7 @@
 
 const score0 = document.getElementById('score--0');
 const score1 = document.querySelector('#score--1');
+const current0EL = document.getElementById('current--0');
 const diceE = document.querySelector('.dice');
 const btnNewGame = document.querySelector('.btn--new');
 const btnRollDice = document.querySelector('.btn--roll');
