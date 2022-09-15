@@ -14,7 +14,9 @@ score1.textContent = 0;
 
 diceE.classList.add('hidden');
 
+const scores = [0, 0];
 let currentScore = 0;
+let activePlayer = 0;
 
 //button Rolling
 
@@ -25,5 +27,7 @@ btnRollDice.addEventListener('click', function () {
   if (dice !== 1) {
     currentScore += dice;
     current0EL.textContent = currentScore;
+  } else {
+    current0EL.textContent = 0;
   }
 });
