@@ -3,6 +3,7 @@
 const score0 = document.getElementById('score--0');
 const score1 = document.querySelector('#score--1');
 const current0EL = document.getElementById('current--0');
+const current1EL = document.getElementById('current--1');
 const diceE = document.querySelector('.dice');
 const btnNewGame = document.querySelector('.btn--new');
 const btnRollDice = document.querySelector('.btn--roll');
@@ -23,5 +24,6 @@ btnRollDice.addEventListener('click', function () {
   diceE.src = `dice-${dice}.png`;
   if (dice !== 1) {
     currentScore += dice;
+    current0EL.textContent = currentScore;
   }
 });
