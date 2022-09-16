@@ -1,5 +1,7 @@
 'use strict';
 
+const player0El = document.querySelector('.player--0');
+const player01El = document.querySelector('.player--1');
 const score0 = document.getElementById('score--0');
 const score1 = document.querySelector('#score--1');
 const current0EL = document.getElementById('current--0');
@@ -27,10 +29,13 @@ btnRollDice.addEventListener('click', function () {
   if (dice !== 1) {
     currentScore += dice;
     current0EL.textContent = currentScore;
-    document.getElementById(`current -- ${activePlayer}`).textContent =
+    document.getElementById(`current--${activePlayer}`).textContent =
       currentScore;
   } else {
+    document.getElementById(`current--${activePlayer}`).textContent = 0;
     activePlayer = activePlayer === 0 ? 1 : 0;
-    current0EL.textContent = 0;
+    currentScore = 0;
+    player0El.classList.toggle('player--active');
+    player01El.classList.toggle('player--active');
   }
 });
